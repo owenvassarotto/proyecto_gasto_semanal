@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tus Gastos Semanales</title>
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/6341/6341918.png"
+    />
+    <link rel="stylesheet" href="/dist/css/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-zinc-950 font-lato">
+    <div class="my-10">
+      <h1 class="text-2xl text-white mb-10 uppercase text-center">
+        Tus gastos semanales 💸
+      </h1>
+      <div
+        class="bg-white mx-6 p-8 rounded-lg flex flex-col gap-5 sm:flex-row sm:justify-around sm:gap-16"
+      >
+        <!-- Formulario para agregar gastos -->
+        <div class="w-full">
+          <h2 class="mb-8 text-center text-gray-800 text-lg">
+            Añade tus gastos aquí
+          </h2>
+          <form id="formulario" action="#">
+            <div class="flex flex-col mb-3">
+              <label class="mb-2" for="gasto">Gasto:</label>
+              <input
+                type="text"
+                id="gasto"
+                class="border border-gray-200 p-1 rounded-sm"
+                placeholder="Nombre del gasto"
+              />
+            </div>
+            <div class="flex flex-col mb-5">
+              <label class="mb-2" for="cantidad">Cantidad:</label>
+              <input
+                type="text"
+                id="cantidad"
+                class="border border-gray-200 p-1 rounded-sm"
+                placeholder="Cantidad en $"
+              />
+            </div>
+            <button
+              id="btnAgregarGasto"
+              type="submit"
+              class="bg-green-500 text-white p-2 rounded-md hover:bg-green-600"
+            >
+              Agregar
+            </button>
+          </form>
+        </div>
+
+        <!-- Listado de gastos -->
+        <div class="w-full">
+          <h2 class="text-center text-gray-800 mb-10 text-lg">Listado</h2>
+          <div>
+            <ul id="lista-gastos" class="mb-6"></ul>
+          </div>
+          <div id="divPresupuesto">
+            <div
+              id="presupuesto"
+              class="bg-blue-300 p-2 mb-2 border border-blue-500 text-blue-800"
+            >
+              Presupuesto: <span class="font-bold"></span>
+            </div>
+            <div
+              id="restante"
+              class="bg-green-300 p-2 border border-green-500 text-green-800"
+            >
+              Restante: <span class="font-bold"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
